@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <!-- vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- ajax -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <title>Vue Email List</title>
+    </head>
+    <body>
+        <div id="root">
+            <div class="container">
+                <h1>Lista email:</h1>
+                <div class="contenitore-lista">
+                    <ul v-if="listaEmail.length >= 10">
+                        <li v-for="email in listaEmail"> {{ email }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- js -->
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
