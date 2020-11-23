@@ -3,15 +3,21 @@
 var app = new Vue ({
     el: '#root',
     data: {
-        listaEmail: []
+        listaEmail: [],
+        numeroMail: 10
     },
 
     mounted() {
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < this.numeroMail; i++) {
+            
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((response) => {
-            this.listaEmail.push(response.data.response);
-        });
+                if (!this.listaEmail.includes(response.data.response)) {
+                    this.listaEmail.push(response.data.response);
+                } else {
+                    i--;
+                }
+            });
         }
         // console.log(this.listaEmail);
     }

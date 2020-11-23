@@ -16,7 +16,7 @@
             <div class="container">
                 <h1>Lista email:</h1>
                 <div class="contenitore-lista">
-                    <ul v-if="listaEmail.length >= 10">
+                    <ul v-if="listaEmail.length >= numeroMail">
                         <li v-for="email in listaEmail"> {{ email }}</li>
                     </ul>
                 </div>
